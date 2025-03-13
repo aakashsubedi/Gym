@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now</title>
+    <meta name="description" content="Join PowerFit Gym for state-of-the-art equipment, expert trainers, and a supportive community to help you achieve your fitness goals.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #dc2626;
+            --primary-dark: #b91c1c;
+            --primary-hover: #b91c1c;
+            --secondary: #27272a;
+            --secondary-dark: #18181b;
+            --foreground: #f8fafc;
+            --background: #09090b;
+            --card: #18181b;
+            --muted: #27272a;
+            --muted-foreground: #a1a1aa;
+            --border: #3f3f46;
+            --input: #3f3f46;
+            --radius: 0.5rem;
+            --success: #22c55e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: #09090b;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--foreground);
+        }
+
+        p {
+            color: var(--foreground);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* Header */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 1.25rem 0;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        .text-red {
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+        }
+
+        .nav-link {
+            margin: 0 1rem;
+            color: var(--muted-foreground);
+        }
+
+        .nav-link:hover {
+            color: white;
+        }
+
+        .menu-toggle {
+            background: transparent;
+            border: none;
+            color: white;
+            display: none;
+            font-size: 1.5rem;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: var(--background);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-nav {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0;
+        }
+
+        .mobile-nav .nav-link {
+            padding: 1rem 0;
+            font-size: 1.25rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-nav .btn {
+            margin-top: 1.5rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-full {
+            width: 100%;
+        }
+
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        /* join-hero Section */
+        .join-hero {
+            text-align: center;
+            padding: 8rem 0 4rem;
+            background-color: var(--bg-light);
+        
+        }
+
+        .join-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--muted-foreground);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Membership Plans */
+        .plans-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .plan-card {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .popular {
+            background-color: rgba(220, 38, 38, 0.05);
+            border-color: var(--primary);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-bottom-left-radius: var(--radius);
+            border-top-right-radius: var(--radius);
+        }
+
+        .plan-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .price-period {
+            font-size: 1rem;
+            color: var(--muted-foreground);
+            font-weight: 400;
+        }
+
+        .features-list {
+            margin-bottom: 2rem;
+            flex-grow: 1;
+        }
+
+        .features-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            stroke: var(--success);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        /* Benefits */
+
+        .benefits{
+            background-color: var(--bg-light);
+        }
+
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            background-color: rgba(220, 38, 38, 0.1);
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit-icon svg {
+            color: var(--primary);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card p {
+            color: var(--muted-foreground);
+        }
+
+        /* Form */
+        .membership-form {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .form-section h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--foreground);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--input);
+            border-radius: var(--radius);
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+        }
+
+        .radio-group, .checkbox-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .checkbox-grid {
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+
+        .radio-option, .checkbox-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .radio-option input, .checkbox-option input {
+            width: auto;
+        }
+
+        .radio-option label, .checkbox-option label {
+            margin-bottom: 0;
+        }
+
+        .form-note {
+            text-align: center;
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--background);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--muted-foreground);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social-link {
+            background-color: var(--muted);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-link:hover {
+            background-color: var(--primary);
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-menu li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-link {
+            color: var(--muted-foreground);
+        }
+
+        .footer-link:hover {
+            color: var(--primary);
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            color: var(--muted-foreground);
+        }
+
+        .hours-note {
+            margin-top: 1.5rem;
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--muted-foreground);
+        }
+
+        .contact-list li i {
+            color: var(--primary);
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--muted-foreground);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(150%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            max-width: 350px;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+        }
+
+        .toast-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .toast-message {
+            color: var(--muted-foreground);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .join-hero h1 {
+                font-size: 2rem;
+            }
+            
+            section h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>POWER<span class="text-red">FIT</span></span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="index.html#trainers" class="nav-link">Trainers</a>
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <a href="join.html">
+                    <button class="btn btn-primary">Join Now</button>
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <nav class="mobile-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="index.html#trainers" class="nav-link">Trainers</a>
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="join.html">
+                        <button class="btn btn-primary btn-full">Join Now</button>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="join-hero">
+            <div class="container">
+                <h1>Join Our Fitness Community</h1>
+                <p class="subtitle">Take the first step towards a healthier lifestyle. Choose the membership that fits your needs and start your fitness journey today.</p>
+            </div>
+        </section>
+
+        <section class="membership-options">
+            <div class="container">
+                <h2>Membership Options</h2>
+                <div class="plans-container">
+                    <div class="plan-card">
+                        <h3>Basic</h3>
+                        <p class="price">$29<span class="price-period">/month</span></p>
+                        <ul class="features-list">
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Access to gym equipment</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Locker room access</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Open 6AM-10PM</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary plan-btn" data-plan="basic">Select Basic</button>
+                    </div>
+
+                    <div class="plan-card popular">
+                        <div class="popular-badge">Popular</div>
+                        <h3>Premium</h3>
+                        <p class="price">$49<span class="price-period">/month</span></p>
+                        <ul class="features-list">
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>All Basic features</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Group fitness classes</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>1 personal training session/month</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Open 24/7</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary plan-btn" data-plan="premium">Select Premium</button>
+                    </div>
+
+                    <div class="plan-card">
+                        <h3>Elite</h3>
+                        <p class="price">$79<span class="price-period">/month</span></p>
+                        <ul class="features-list">
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>All Premium features</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>4 personal training sessions/month</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Nutrition consultation</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Towel service</span>
+                            </li>
+                            <li>
+                                <svg class="check-icon" viewBox="0 0 24 24">
+                                    <path d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Guest passes (2/month)</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary plan-btn" data-plan="elite">Select Elite</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="container">
+                <h2>Why Join PowerFit?</h2>
+                <div class="benefits-container">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6.5 6.5h11"></path>
+                                <path d="M6.5 17.5h11"></path>
+                                <path d="M3 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path>
+                                <path d="M3 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path>
+                                <path d="M21 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path>
+                                <path d="M21 19a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path>
+                            </svg>
+                        </div>
+                        <h3>State-of-the-Art Equipment</h3>
+                        <p>Our gym features the latest fitness equipment to help you achieve your goals efficiently.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                            </svg>
+                        </div>
+                        <h3>Expert Trainers</h3>
+                        <p>Our certified trainers are dedicated to helping you reach your fitness goals safely and effectively.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3>Community Support</h3>
+                        <p>Join a supportive community that will motivate and inspire you on your fitness journey.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="join-form">
+            <div class="container">
+                <h2>Ready to Join?</h2>
+                <form id="membershipForm" class="membership-form">
+                    <div class="form-section">
+                        <h3>Personal Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Membership Plan</h3>
+                        
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="basic" name="plan" value="basic">
+                                <label for="basic">Basic ($29/month)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="premium" name="plan" value="premium" checked>
+                                <label for="premium">Premium ($49/month)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="elite" name="plan" value="elite">
+                                <label for="elite">Elite ($79/month)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Membership Details</h3>
+                        
+                        <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" id="startDate" name="startDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="duration">Membership Duration</label>
+                            <select id="duration" name="duration">
+                                <option value="1">1 Month</option>
+                                <option value="3">3 Months</option>
+                                <option value="6">6 Months</option>
+                                <option value="12" selected>12 Months</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Fitness Goals (Select all that apply)</label>
+                            <div class="checkbox-grid">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="weightLoss" name="goals" value="weightLoss">
+                                    <label for="weightLoss">Weight Loss</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="muscleGain" name="goals" value="muscleGain">
+                                    <label for="muscleGain">Muscle Gain</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="endurance" name="goals" value="endurance">
+                                    <label for="endurance">Endurance</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="flexibility" name="goals" value="flexibility">
+                                    <label for="flexibility">Flexibility</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="generalFitness" name="goals" value="generalFitness">
+                                    <label for="generalFitness">General Fitness</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="rehabilitation" name="goals" value="rehabilitation">
+                                    <label for="rehabilitation">Rehabilitation</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                I agree to the <a href="/terms">Terms and Conditions</a> and <a href="/privacy">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <div class="checkbox-option">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">
+                                I would like to receive newsletters and promotional emails
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary submit-btn">Submit Application</button>
+                    
+                    <p class="form-note">
+                        After submitting, a team member will contact you to complete your registration and set up payment.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <h3 class="toast-title">Application Submitted!</h3>
+        <p class="toast-message">Thank you for your interest in PowerFit Gym. A team member will contact you shortly.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>POWER<span class="text-red">FIT</span></span>
+                    </div>
+                    <p class="footer-text">
+                        Transforming lives through fitness since 2010. Our state-of-the-art facilities and expert trainers are here to help you achieve your fitness goals.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-menu">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                        <li><a href="index.html#services" class="footer-link">Services</a></li>
+                        <li><a href="index.html#trainers" class="footer-link">Our Trainers</a></li>
+                        <li><a href="index.html#pricing" class="footer-link">Membership</a></li>
+                        <li><a href="index.html#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Working Hours -->
+                <div class="footer-hours">
+                    <h3 class="footer-title">Working Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday - Friday:</span>
+                            <span class="time">24 Hours</span>
+                        </li>
+                        <li>
+                            <span class="day">Saturday:</span>
+                            <span class="time">24 Hours</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday:</span>
+                            <span class="time">24 Hours</span>
+                        </li>
+                    </ul>
+                    <p class="hours-note">
+                        <span class="text-red">Note:</span> Trainer hours vary. Please check the schedule for class times.
+                    </p>
+                </div>
+                
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bharatpur, Chitwan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+123-4567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>aakkashsubedi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> PowerFit Gym. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile menu toggle
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-nav .nav-link');
+
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('active');
+                    
+                    // Toggle between menu and close icons
+                    const menuIcon = mobileMenuToggle.querySelector('i');
+                    if (menuIcon) {
+                        if (mobileMenu.classList.contains('active')) {
+                            menuIcon.classList.remove('fa-bars');
+                            menuIcon.classList.add('fa-times');
+                        } else {
+                            menuIcon.classList.remove('fa-times');
+                            menuIcon.classList.add('fa-bars');
+                        }
+                    }
+                });
+
+                // Close mobile menu when a link is clicked
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.remove('active');
+                        
+                        // Reset menu icon
+                        const menuIcon = mobileMenuToggle.querySelector('i');
+                        if (menuIcon) {
+                            menuIcon.classList.remove('fa-times');
+                            menuIcon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
+
+            // Plan selection from pricing cards
+            const planButtons = document.querySelectorAll('.plan-btn');
+            const planRadios = document.querySelectorAll('input[name="plan"]');
+            
+            planButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedPlan = button.getAttribute('data-plan');
+                    
+                    // Find and check the corresponding radio button
+                    planRadios.forEach(radio => {
+                        if (radio.value === selectedPlan) {
+                            radio.checked = true;
+                        }
+                    });
+                    
+                    // Scroll to form
+                    document.querySelector('.join-form').scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            // Form submission
+            const membershipForm = document.getElementById('membershipForm');
+            const toast = document.getElementById('toast');
+            
+            if (membershipForm && toast) {
+                membershipForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Disable submit button and show loading state
+                    const submitBtn = this.querySelector('.submit-btn');
+                    const originalBtnText = submitBtn.textContent;
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Processing...';
+                    
+                    // Simulate form submission (replace with actual form submission)
+                    setTimeout(() => {
+                        // Show success toast
+                        toast.classList.add('show');
+                        
+                        // Reset form
+                        membershipForm.reset();
+                        
+                        // Reset button
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                        
+                        // Hide toast after 5 seconds
+                        setTimeout(() => {
+                            toast.classList.remove('show');
+                        }, 5000);
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+

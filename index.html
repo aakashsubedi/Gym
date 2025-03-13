@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym</title>
+    <meta name="description" content="Join PowerFit Gym for state-of-the-art equipment, expert trainers, and a supportive community to help you achieve your fitness goals.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    <span>POWER<span class="text-red">FIT</span></span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#trainers" class="nav-link">Trainers</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+
+                <!-- CTA Button --><a href="join.html">
+                <button  class="btn btn-primary">Join Now</button>
+</a>
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <nav class="mobile-nav">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#trainers" class="nav-link">Trainers</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                    <button class="btn btn-primary btn-full">Join Now</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1 class="hero-title">
+                        TRANSFORM YOUR <span class="text-red">BODY</span>
+                        <br>TRANSFORM YOUR <span class="text-red">LIFE</span>
+                    </h1>
+                    
+                    <p class="hero-subtitle">
+                        Join the ultimate fitness experience with state-of-the-art equipment, 
+                        expert trainers, and a supportive community.
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">
+                            Get Started
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-outline">
+                            View Classes
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item animate-element">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="stat-value" data-count="2500">0</h3>
+                        <p class="stat-label">Members</p>
+                    </div>
+                    <div class="stat-item animate-element">
+                        <div class="stat-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3 class="stat-value" data-count="150">0</h3>
+                        <p class="stat-label">Equipment</p>
+                    </div>
+                    <div class="stat-item animate-element">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <h3 class="stat-value" data-count="50">0</h3>
+                        <p class="stat-label">Classes Weekly</p>
+                    </div>
+                    <div class="stat-item animate-element">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="stat-value" data-count="25">0</h3>
+                        <p class="stat-label">Expert Trainers</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content animate-element">
+                        <h2 class="section-title">ABOUT <span class="text-red">POWERFIT</span></h2>
+                        <div class="title-line"></div>
+                        <p class="section-text">
+                            Founded in 2010, PowerFit has grown to become the premier fitness destination 
+                            for those serious about transforming their bodies and lives. Our state-of-the-art 
+                            facilities span over 25,000 square feet of training space equipped with the latest 
+                            fitness technology.
+                        </p>
+                        <p class="section-text">
+                            What sets us apart is our community of dedicated fitness professionals and members 
+                            who create an atmosphere of motivation and support. Whether you're a beginner or an 
+                            experienced athlete, we provide the environment and expertise to help you achieve your goals.
+                        </p>
+                        <button class="btn btn-primary">
+                            Learn More
+                        </button>
+                    </div>
+                    
+                    <div class="about-image-container animate-element">
+                        <div class="about-image">
+                            <img src="images/about.jpg" alt="Gym interior">
+                        </div>
+                        <div class="about-badge">
+                            <p class="badge-number">13+</p>
+                            <p class="badge-text">YEARS OF EXCELLENCE</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">OUR <span class="text-red">SERVICES</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">
+                        We offer a comprehensive range of fitness services designed to help you achieve your goals,
+                        whether you're looking to build muscle, lose weight, or improve your overall health.
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-card animate-element">
+                        <div class="service-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3 class="service-title">Strength Training</h3>
+                        <p class="service-description">Build muscle, increase strength, and boost your metabolism with our comprehensive strength training programs.</p>
+                    </div>
+                    <div class="service-card animate-element" data-delay="100">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="service-title">Group Classes</h3>
+                        <p class="service-description">Join our energetic group classes including HIIT, cycling, yoga, and more for a motivating workout experience.</p>
+                    </div>
+                    <div class="service-card animate-element" data-delay="200">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="service-title">Cardio Programs</h3>
+                        <p class="service-description">Improve your cardiovascular health with our variety of cardio equipment and specialized training programs.</p>
+                    </div>
+                    <div class="service-card animate-element" data-delay="300">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="service-title">Personal Training</h3>
+                        <p class="service-description">Get customized workout plans and one-on-one guidance from our certified personal trainers.</p>
+                    </div>
+                    <div class="service-card animate-element" data-delay="400">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="service-title">24/7 Access</h3>
+                        <p class="service-description">Train on your schedule with 24/7 access to our facilities, giving you ultimate flexibility.</p>
+                    </div>
+                    <div class="service-card animate-element" data-delay="500">
+                        <div class="service-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3 class="service-title">Nutrition Coaching</h3>
+                        <p class="service-description">Complement your fitness routine with expert nutrition advice tailored to your specific goals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainers Section -->
+        <section id="trainers" class="trainers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">EXPERT <span class="text-red">TRAINERS</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">
+                        Our team of certified fitness professionals is dedicated to helping you achieve your goals
+                        through personalized guidance and motivation.
+                    </p>
+                </div>
+                
+                <div class="trainers-grid">
+                    <div class="trainer-card animate-element">
+                        <div class="trainer-image-container">
+                            <img src="images/trainer1.jpg" alt="Alex Johnson" class="trainer-image">
+                            <div class="trainer-social">
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h3 class="trainer-name">Alex Johnson</h3>
+                            <p class="trainer-role">Strength Coach</p>
+                            <p class="trainer-bio">Certified strength specialist with 10+ years of experience in bodybuilding and powerlifting.</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card animate-element" data-delay="100">
+                        <div class="trainer-image-container">
+                            <img src="images/trainer2.jpg" alt="Sarah Williams" class="trainer-image">
+                            <div class="trainer-social">
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h3 class="trainer-name">Sarah Williams</h3>
+                            <p class="trainer-role">Yoga & Pilates Instructor</p>
+                            <p class="trainer-bio">Former professional dancer with expertise in flexibility, mobility, and mind-body connection.</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card animate-element" data-delay="200">
+                        <div class="trainer-image-container">
+                            <img src="images/trainer3.jpg" alt="Michael Chen" class="trainer-image">
+                            <div class="trainer-social">
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h3 class="trainer-name">Michael Chen</h3>
+                            <p class="trainer-role">HIIT Specialist</p>
+                            <p class="trainer-bio">Sports science graduate specializing in high-intensity interval training and athletic performance.</p>
+                        </div>
+                    </div>
+                    <div class="trainer-card animate-element" data-delay="300">
+                        <div class="trainer-image-container">
+                            <img src="images/trainer4.jpg" alt="Jessica Rodriguez" class="trainer-image">
+                            <div class="trainer-social">
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <div class="trainer-info">
+                            <h3 class="trainer-name">Jessica Rodriguez</h3>
+                            <p class="trainer-role">Nutrition Coach</p>
+                            <p class="trainer-bio">Certified nutritionist helping clients optimize their diet for maximum fitness results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">MEMBERSHIP <span class="text-red">PLANS</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">
+                        Choose the membership plan that fits your fitness goals and budget.
+                        All plans include access to our state-of-the-art facilities.
+                    </p>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card animate-element">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Basic</h3>
+                            <p class="pricing-description">Perfect for beginners</p>
+                            <div class="pricing-price">
+                                <span class="price">$29</span>
+                                <span class="period">/monthly</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Access to gym facilities</li>
+                                <li><i class="fas fa-check"></i> Basic fitness assessment</li>
+                                <li><i class="fas fa-check"></i> 2 group classes per week</li>
+                                <li><i class="fas fa-check"></i> Locker room access</li>
+                                <li><i class="fas fa-check"></i> Mobile app access</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-secondary">Choose Plan</button>
+                        </div>
+                    </div>
+                    <div class="pricing-card popular animate-element" data-delay="100">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Premium</h3>
+                            <p class="pricing-description">Our most popular plan</p>
+                            <div class="pricing-price">
+                                <span class="price">$59</span>
+                                <span class="period">/monthly</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> Full 24/7 gym access</li>
+                                <li><i class="fas fa-check"></i> Unlimited group classes</li>
+                                <li><i class="fas fa-check"></i> 1 personal training session/month</li>
+                                <li><i class="fas fa-check"></i> Nutrition consultation</li>
+                                <li><i class="fas fa-check"></i> Access to all facilities</li>
+                                <li><i class="fas fa-check"></i> Priority class booking</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-primary">Choose Plan</button>
+                        </div>
+                    </div>
+                    <div class="pricing-card animate-element" data-delay="200">
+                        <div class="pricing-header">
+                            <h3 class="pricing-title">Elite</h3>
+                            <p class="pricing-description">For serious fitness enthusiasts</p>
+                            <div class="pricing-price">
+                                <span class="price">$99</span>
+                                <span class="period">/monthly</span>
+                            </div>
+                        </div>
+                        <div class="pricing-features">
+                            <ul>
+                                <li><i class="fas fa-check"></i> All Premium features</li>
+                                <li><i class="fas fa-check"></i> 4 personal training sessions/month</li>
+                                <li><i class="fas fa-check"></i> Monthly body composition analysis</li>
+                                <li><i class="fas fa-check"></i> Custom nutrition plan</li>
+                                <li><i class="fas fa-check"></i> Recovery zone access</li>
+                                <li><i class="fas fa-check"></i> Guest passes (2/month)</li>
+                            </ul>
+                        </div>
+                        <div class="pricing-footer">
+                            <button class="btn btn-secondary">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">SUCCESS <span class="text-red">STORIES</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">
+                        Hear from our members who have transformed their lives through dedication and
+                        the support of our fitness community.
+                    </p>
+                </div>
+                
+                <div class="testimonials-container animate-element">
+                    <div class="testimonial-card" id="testimonials-slider">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <div class="testimonial-content">
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="https://placehold.co/200x200" alt="David Miller">
+                                </div>
+                                <div class="author-info">
+                                    <h3 class="author-name">David Miller</h3>
+                                    <p class="author-role">Member for 2 years</p>
+                                </div>
+                            </div>
+                            <div class="testimonial-text">
+                                <p>"PowerFit completely transformed my approach to fitness. The trainers are knowledgeable and supportive, and the community keeps me motivated. I've lost 30 pounds and gained confidence!"</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-controls">
+                        <button class="testimonial-prev" id="prev-testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="testimonial-dots">
+                            <button class="dot active" data-index="0"></button>
+                            <button class="dot" data-index="1"></button>
+                            <button class="dot" data-index="2"></button>
+                            <button class="dot" data-index="3"></button>
+                        </div>
+                        <button class="testimonial-next" id="next-testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">GET IN <span class="text-red">TOUCH</span></h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">
+                        Have questions about our facilities or membership options? 
+                        Reach out to us and our team will get back to you as soon as possible.
+                    </p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info animate-element">
+                        <h3 class="contact-title">Contact Information</h3>
+                        
+                        <div class="info-items">
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Our Location</h4>
+                                    <p class="info-text">Bharatpur, Chitwan</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Phone Number</h4>
+                                    <p class="info-text">+123-4567890</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Email Address</h4>
+                                    <p class="info-text">aakkashsubedi@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="info-content">
+                                    <h4 class="info-title">Working Hours</h4>
+                                    <p class="info-text">24/7 - Always Open</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-section">
+                            <h3 class="contact-title">Follow Us</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-icon-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-icon-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-icon-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-icon-link">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container animate-element">
+                        <h3 class="contact-title">Send Us a Message</h3>
+                        
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required class="form-input">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required class="form-input">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="phone" name="phone" placeholder="Your Phone" class="form-input">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- About -->
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>POWER<span class="text-red">FIT</span></span>
+                    </div>
+                    <p class="footer-text">
+                        Transforming lives through fitness since 2010. Our state-of-the-art facilities and expert trainers are here to help you achieve your fitness goals.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="footer-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#services" class="footer-link">Services</a></li>
+                        <li><a href="#trainers" class="footer-link">Our Trainers</a></li>
+                        <li><a href="#pricing" class="footer-link">Membership</a></li>
+                        <li><a href="#contact" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Working Hours -->
+                <div class="footer-hours">
+                    <h3 class="footer-title">Working Hours</h3>
+                    <ul class="hours-list">
+                        <li>
+                            <span class="day">Monday - Friday:</span>
+                            <span class="time">24 Hours</span>
+                        </li>
+                        <li>
+                            <span class="day">Saturday:</span>
+                            <span class="time">24 Hours</span>
+                        </li>
+                        <li>
+                            <span class="day">Sunday:</span>
+                            <span class="time">24 Hours</span>
+                        </li>
+                    </ul>
+                    <p class="hours-note">
+                        <span class="text-red">Note:</span> Trainer hours vary. Please check the schedule for class times.
+                    </p>
+                </div>
+                
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bharatpur, Chitwan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+123-4567890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>aakkashsubedi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> PowerFit Gym. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Hidden testimonials data for JavaScript -->
+    <div id="testimonials-data" style="display: none;">
+        <div class="testimonial" data-index="0">
+            <div class="author">
+                <img src="https://placehold.co/200x200" alt="David Miller">
+                <h3>David Miller</h3>
+                <p>Member for 2 years</p>
+            </div>
+            <div class="text">
+                <p>"PowerFit completely transformed my approach to fitness. The trainers are knowledgeable and supportive, and the community keeps me motivated. I've lost 30 pounds and gained confidence!"
+            </div>
+        </div>
+        <div class="testimonial" data-index="1">
+            <div class="author">
+                <img src="https://placehold.co/200x200" alt="Emma Thompson">
+                <h3>Emma Thompson</h3>
+                <p>Member for 1 year</p>
+            </div>
+            <div class="text">
+                <p>"After trying several gyms, I finally found my fitness home at PowerFit. The facilities are top-notch, and the personal training has helped me achieve goals I never thought possible."</p>
+            </div>
+        </div>
+        <div class="testimonial" data-index="2">
+            <div class="author">
+                <img src="https://placehold.co/200x200" alt="James Wilson">
+                <h3>James Wilson</h3>
+                <p>Member for 3 years</p>
+            </div>
+            <div class="text">
+                <p>"As a busy professional, I appreciate the 24/7 access and variety of classes that fit my schedule. The trainers remember your name and genuinely care about your progress."</p>
+            </div>
+        </div>
+        <div class="testimonial" data-index="3">
+            <div class="author">
+                <img src="https://placehold.co/200x200" alt="Sophia Garcia">
+                <h3>Sophia Garcia</h3>
+                <p>Member for 6 months</p>
+            </div>
+            <div class="text">
+                <p>"The nutrition coaching combined with my workout routine has been a game-changer. I've seen more progress in 6 months at PowerFit than in years at other gyms."</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
